@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14A4115A1B89ADB30028C3B1 /* MyGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A411591B89ADB30028C3B1 /* MyGameScene.m */; };
 		4F021F3F1B89933200DAD3EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F021F3E1B89933200DAD3EA /* main.m */; };
 		4F021F421B89933200DAD3EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F021F411B89933200DAD3EA /* AppDelegate.m */; };
 		4F021F4A1B89933200DAD3EA /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F021F491B89933200DAD3EA /* GameViewController.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14A411581B89ADB30028C3B1 /* MyGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGameScene.h; sourceTree = "<group>"; };
+		14A411591B89ADB30028C3B1 /* MyGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyGameScene.m; sourceTree = "<group>"; };
 		4F021F391B89933200DAD3EA /* FastFoodIsEvil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastFoodIsEvil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F021F3D1B89933200DAD3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F021F3E1B89933200DAD3EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				4F021F401B89933200DAD3EA /* AppDelegate.h */,
+				14A411581B89ADB30028C3B1 /* MyGameScene.h */,
+				14A411591B89ADB30028C3B1 /* MyGameScene.m */,
 				4F021F411B89933200DAD3EA /* AppDelegate.m */,
 				4F021F671B89958300DAD3EA /* Level1.sks */,
 				4F021F691B8997A200DAD3EA /* PL1FastFoodGameScene.h */,
@@ -228,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A4115A1B89ADB30028C3B1 /* MyGameScene.m in Sources */,
 				4F021F6B1B8997A200DAD3EA /* PL1FastFoodGameScene.m in Sources */,
 				4F021F4A1B89933200DAD3EA /* GameViewController.m in Sources */,
 				4F021F421B89933200DAD3EA /* AppDelegate.m in Sources */,
@@ -428,6 +434,7 @@
 				4F021F631B89933200DAD3EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4F021F641B89933200DAD3EA /* Build configuration list for PBXNativeTarget "FastFoodIsEvilTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +443,7 @@
 				4F021F661B89933200DAD3EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
