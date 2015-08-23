@@ -7,7 +7,11 @@
 //
 
 #import "GameViewController.h"
+<<<<<<< HEAD
 #import "MyGameScene.h"
+=======
+#import "PL1FastFoodGameScene.h"
+>>>>>>> NikolayShubenkovProgSchool/master
 
 @implementation SKScene (Unarchive)
 
@@ -19,8 +23,13 @@
                                           options:NSDataReadingMappedIfSafe
                                             error:nil];
     NSKeyedUnarchiver *arch = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
+<<<<<<< HEAD
 //    [arch setClass:self forClassName:@"SKScene"];
     [arch setClass:self forClassName:@"SKScene"];
+=======
+    [arch setClass:self
+      forClassName:@"SKScene"];
+>>>>>>> NikolayShubenkovProgSchool/master
 
     SKScene *scene = [arch decodeObjectForKey:NSKeyedArchiveRootObjectKey];
     [arch finishDecoding];
@@ -40,10 +49,15 @@
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
+    skView.ignoresSiblingOrder = NO;
     /* Sprite Kit applies additional optimizations to improve rendering performance */
     
     // Create and configure the scene.
+<<<<<<< HEAD
     SKScene *scene = [MyGameScene unarchiveFromFile:@"Level1"];
+=======
+    SKScene *scene = [PL1FastFoodGameScene unarchiveFromFile:@"Level1"];
+>>>>>>> NikolayShubenkovProgSchool/master
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.
