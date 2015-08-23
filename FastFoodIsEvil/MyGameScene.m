@@ -10,7 +10,8 @@
 
 typedef NS_ENUM(NSInteger, MyGameSceneState){
     MyGameSceneStateInitial,
-    MyGameSceneStateReady
+    MyGameSceneStateReady,
+    MyGameSceneStateDragging
 };
 
 @interface MyGameScene ()
@@ -19,6 +20,7 @@ typedef NS_ENUM(NSInteger, MyGameSceneState){
 @property (nonatomic) MyGameSceneState state;
 @property (nonatomic, weak) SKPhysicsBody *bodyToThrow;
 @property (nonatomic, weak) SKNode *nodeToThrow;
+@property (nonatomic) CGPoint startDragPosition;
 
 @end
 
@@ -59,6 +61,28 @@ typedef NS_ENUM(NSInteger, MyGameSceneState){
             break;
     }
 }
+
+#pragma mark - Touch Handling
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    switch (self.state) {
+        case MyGameSceneStateReadyToThrow:{
+            
+        }UITouch *anyTouch = [touches anyObject];
+            CGPoint touchCoordinate = [anyTouch locationInNode:self];
+            if ([self nodesAtPoint:touchCoordinate] == self.nodeToThrow) {
+                self.startDragPosition = touchCoordinate;
+                self.state = MyGameSceneStateDragging;
+            }
+    }break;
+        default:
+            break;
+    }
+    
+
+}
+
 
 -(void)putNodeToBallPosition:(SKNode *)aNode{
     self.nodeToThrow = aNode;
